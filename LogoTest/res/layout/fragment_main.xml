@@ -1,0 +1,365 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sun_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <!-- scroll의 one child -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 위치설정 -->
+
+                <RelativeLayout
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp" >
+
+                    <TextView
+                        android:id="@+id/local_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="서울특별시 광진구"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/search_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/local_name"
+                        android:background="@drawable/location" />
+                </RelativeLayout>
+
+                <!-- Today -->
+
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/search"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="TODAY"
+                    android:textColor="#fff" />
+                <!-- 오늘 -->
+
+                <RelativeLayout
+                    android:id="@+id/holo_today"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp" >
+
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                        android:id="@+id/holoCircularProgressBar"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/blur" />
+
+                    <View
+                        android:id="@+id/today_tip"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:id="@+id/today_warning_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/today_tip"
+                        android:layout_centerHorizontal="true"
+                        android:text="6단계"
+                        android:textColor="#fff"
+                        android:textSize="45dp" />
+
+                    <TextView
+                        android:id="@+id/today_warning_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/today_tip"
+                        android:layout_centerHorizontal="true"
+                        android:text="위험해요!"
+                        android:textColor="#fff"
+                        android:textSize="30dp" />
+                </RelativeLayout>
+
+                <!-- 오늘의 spf 및 행동강령 -->
+
+                <LinearLayout
+                    android:id="@+id/spf"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/holo_today"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/spf_today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/sun"
+                        android:drawablePadding="5dp"
+                        android:gravity="left"
+                        android:text="SPF 30 - 40"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/spf_today_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/clock"
+                        android:drawablePadding="5dp"
+                        android:layout_gravity="top"
+                        android:gravity="left|top"
+                        android:text="아침에 1번, 점심에 1번"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <!-- 내일과 모레를 나누는 선 -->
+
+
+                <!-- Tomorrow -->
+
+                <TextView
+                    android:id="@+id/tomorrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spf"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:text="TOMORROW"
+                    android:textColor="#fff" />
+
+                <!-- 내일 -->
+
+                <View
+                    android:id="@+id/tip"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/holo_today"
+                    android:layout_centerHorizontal="true" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_tomorrow"
+                    android:layout_width="150dp"
+                    android:layout_height="500dp"
+                    android:layout_below="@id/tomorrow"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@id/tip" >
+
+                    <TextView
+                        android:id="@+id/tomorrow_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="내일"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tomorrow_spf_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tomorrow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="3"
+                        android:textColor="#fff"
+                        android:textSize="80dp" />
+
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                        android:id="@+id/holoCircularProgressBar_tomorrow"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_below="@id/tomorrow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_below="@id/tomorrow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/blur" />
+
+                    <TextView
+                        android:id="@+id/tomorrow_spf_text_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/holoCircularProgressBar_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="안전해요"
+                        android:textColor="#fff" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_spf1"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/tomorrow_spf_text_rating"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tomorrow_spf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPF"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tomorrow_spf_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="20 - 30"
+                            android:textSize="15dp"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 모레 -->
+
+                <RelativeLayout
+                    android:id="@+id/layout_after_tomorrow"
+                    android:layout_width="150dp"
+                    android:layout_height="500dp"
+                    android:layout_below="@id/tomorrow"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/tip" >
+
+                    <TextView
+                        android:id="@+id/after_tomorow_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="모레"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/after_tomorrow_spf_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/after_tomorow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="8"
+                        android:textColor="#fff"
+                        android:textSize="80dp" />
+
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                        android:id="@+id/holoCircularProgressBar_after_tomorrow"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_below="@id/after_tomorow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" />
+
+                    <ImageView
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_below="@id/after_tomorow_date"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/blur" />
+
+                    <TextView
+                        android:id="@+id/after_tomorrow_text_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/holoCircularProgressBar_after_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="위험해요"
+                        android:textColor="#fff" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_spf2"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/after_tomorrow_text_rating"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/after_tomorrow_spf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPF"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/after_tomorrow_spf_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="45 - 50"
+                            android:textSize="15dp"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/push_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/push_uncheck" />
+
+        <Button
+            android:id="@+id/user_setting"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/setting_selector" />
+    </RelativeLayout>
+
+</FrameLayout>

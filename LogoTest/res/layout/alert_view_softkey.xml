@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_layout"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp" >
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/phone"
+            android:contentDescription="@string/image_title" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image1"
+            android:text="어플 설명"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/infoText_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoText"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/image1"
+            android:text="어플에대한 자세한 설명"
+            android:textColor="#ccc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/kakao"
+            android:contentDescription="@string/image_title" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/kakaoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image2"
+            android:text="카톡보내기"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/kakaoText_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kakaoText"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/image2"
+            android:text="지인에게 자외선 정보를 공유"
+            android:textColor="#ccc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/check"
+            android:contentDescription="@string/image_title" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/behaviorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image3"
+            android:text="이렇게 하세요"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/behaviorText_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/behaviorText"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/image3"
+            android:text="자외선 지수에 맞는 행동강령"
+            android:textColor="#ccc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/info"
+            android:contentDescription="@string/image_title" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/widgetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image4"
+            android:text="위젯 설정"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/widgetText_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/widgetText"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/image4"
+            android:text="위젯에서 표시할 지역을 설정"
+            android:textColor="#ccc" />
+    </RelativeLayout>
+
+</LinearLayout>

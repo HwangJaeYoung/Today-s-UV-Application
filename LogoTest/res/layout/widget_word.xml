@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222222"
+    android:focusable="true" >
+
+    <TextView
+        android:id="@+id/widget_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="업데이트 중..."
+        android:textColor="#fff"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/uvToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tip"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tip"
+        android:textColor="#fff"
+        android:text="단계"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/uvToday_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/uvToday_color"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/uvToday_alert"
+        android:background="#ff0033"
+        android:contentDescription="@string/image_title" />
+
+</RelativeLayout>

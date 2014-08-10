@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="TypographyDashed ">
+    <string name="ga_logLevel">verbose</string>
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+    <!-- The screen names that will appear in reports -->
+    <screenName name="com.example.logotest.A_Main">A_Main</screenName>
+    <screenName name="com.example.logotest.ErrorPageActivity">ErrorPageActivity</screenName>
+    <!--  The following value should be replaced with correct property id. -->
+    <string name="ga_trackingId">UA-51557450-1</string>
+</resources>
